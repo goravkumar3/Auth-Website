@@ -1,0 +1,19 @@
+.main{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+    padding: 120px 40px;
+}
+.form{
+    padding: 0px 40px;
+    padding-top: 80px; 
+    width: 80%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.sign{
+    margin-top: 20px;
+}
+.sign a{
+    text-decoration: none;
+}

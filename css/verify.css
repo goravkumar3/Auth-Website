@@ -1,0 +1,22 @@
+.main{
+    padding: 120px 40px;
+}
+.verify-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 80px 0px;
+    text-align: center;
+}
+span{
+    font-weight: bold;
+}
+button{
+    border: none;
+    outline: none;
+    background-color: rgb(109, 31, 183);
+    color: #ffffff;
+    padding: 10px 40px;
+}
