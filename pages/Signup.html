@@ -1,51 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sign Up</title>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
-    <script >
-        const firebaseConfig = {
-            apiKey: "AIzaSyDq2dmz9sTD6e25Ek5htoDtkfNKKi0JeF4",
-            authDomain: "bitcoin-9dba3.firebaseapp.com",
-            projectId: "bitcoin-9dba3",
-            storageBucket: "bitcoin-9dba3.appspot.com",
-            messagingSenderId: "427279505829",
-            appId: "1:427279505829:web:1340f7d9ca445c162df04c",
-            measurementId: "G-Y8T5FL230J"
-        };
-        firebase.initializeApp(firebaseConfig);
-    </script>
-    <link rel="stylesheet" href="./../css/sign.css">
-  </head>
-  <body>
-    <div class="container-fluid main">
-        <div class=" form">
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="Email" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating">
-                <input type="password" class="form-control" id="Password" placeholder="Password">
-                <label for="floatingPassword">Password</label>
-              </div>
-              <p id="message"></p>
-              <div class="sign">
-                <h5>Already a member?<a href="./login.html"> login</a></h5>
-              </div>
-              <div class="d-grid gap-2">
-                <button class="btn btn-primary" type="button" onclick="signup()">Sign up</button>
-              </div>
-        </div>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Sign Up</title>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+  <script src="./../js/firebase.js"></script>
+  <link rel="stylesheet" href="./../css/sign.css">
+</head>
+
+<body>
+  <div class="container-fluid main">
+    <div class=" form">
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="Email" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="Password" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <p id="message"></p>
+      <div class="sign">
+        <h5>Already a member?<a href="./login.html"> login</a></h5>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="button" onclick="signup()">Sign up</button>
+      </div>
     </div>
+  </div>
 </body>
 <script src="./../js/signup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </html>

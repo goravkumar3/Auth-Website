@@ -43,8 +43,7 @@ body {
     animation-delay: 1s; 
 }
 .circle{
-    animation: float 1s 1s infinite steps(12) alternate-reverse
-
+    animation: float 1s 1s infinite steps(12) alternate-reverse;
 }
 @keyframes float {
     0%{

@@ -20,7 +20,7 @@ let login = () => {
           window.location.href = "./home.html";
           }
           else{
-            window.location.href ='./verifaction';
+            window.location.href ='./verifaction.html';
           }
       },3000);
     })

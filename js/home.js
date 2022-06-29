@@ -4,8 +4,7 @@ firebase.auth().onAuthStateChanged((user) => {
     // https://firebase.google.com/docs/reference/js/firebase.User
     var uid = user.uid;
     console.log(user);
-    if(user.emailVerified) {
-      // window.location.href = "./home.html";
+    if(!user.emailVerified) {
       }
   } else {
     // User is signed out
@@ -13,5 +12,16 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 let logout=()=>{
-  firebase.auth().signOut();
+  firebase.auth().signOut()
+}
+$('.humburgur').click(function(){
+  $('.main_menu').toggleClass('sub_menu');
+})
+
+const func=()=>{
+  var database = firebase.database();
+   database.ref('users/').set({
+    username: "Gorav",
+    lastname:"Kumar"
+  });
 }
