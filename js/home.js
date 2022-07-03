@@ -19,9 +19,9 @@ let logout = () => {
 $(".humburgur").click(function () {
   $(".main_menu").toggleClass("sub_menu");
 });
-alert("Welcome "+uname+"!");
 const getComment = document.getElementById("comment");
 const Comments = () => {
+  alert("Welcome "+uname+"!");
   var database = firebase.database();
   database.ref("comm/").push({
     Comm: getComment.value,
