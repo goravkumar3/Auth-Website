@@ -1,10 +1,18 @@
 const email = document.getElementById("Email");
 const password = document.getElementById("Password");
+const FullName = document.getElementById("Fname");
+const fatherName = document.getElementById("fathname");
+const number = document.getElementById("number");
+const CINC=document.getElementById("CINC");
 const message = document.getElementById("message");
 let signup = () => {
   const obj = {
     email: email.value,
     password: password.value,
+    fullName:FullName.value,
+    number: number.value,
+    fName:fatherName.value,
+    CINC: CINC.value,
   };
   if (obj.email == "") {
     message.style.color = "red";

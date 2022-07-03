@@ -68,6 +68,38 @@ main{
 .main_image{
     width: 50%;
 }
+.comment{
+    display: flex;
+    gap: 70px;
+}
+.comment_box{
+    padding-left: 80px;
+}
+.comment_box h4{
+    font-size: 40px;
+    /* background: linear-gradient(120deg,rgb(233, 17, 17),rgb(211, 115, 37)); */
+    /* -webkit-background-clip: text; */
+    text-transform: capitalize;
+}
+#comment{
+    border: none;
+    outline: none;
+    background-color: #092342;
+    color: #ffffff;
+    width: 60%;
+    height: 50px;
+}
+#comment::placeholder{
+    color: crimson;
+    padding: 20px;
+}
+.comment button{
+    border: none;
+    outline: none;
+    background-color: crimson;
+    color: #ffffff;
+    padding: 10px 80px;
+}
 @media only screen and (max-width: 668px) {
     nav{
         justify-content: space-between;
