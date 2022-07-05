@@ -21,7 +21,7 @@ $(".humburgur").click(function () {
 });
 const getComment = document.getElementById("comment");
 const Comments = () => {
-  alert("Welcome "+uname+"!");
+  // alert("Welcome "+uname+"!");
   var database = firebase.database();
   database.ref("comm/").push({
     Comm: getComment.value,
@@ -35,12 +35,13 @@ firebase
   .ref("comm/")
   .on("child_added", (CommentData) => {
     const key = CommentData.key;
-    CommentData.forEach((commentValue)=>{
-      const Value = commentValue.val();
+      const Value = CommentData.val();
+      const userName=document.createElement("h2");
+      main.appendChild(userName);
+      userName.textContent =Value.userName;
       const showComment=document.createElement("p");
       main.appendChild(showComment);
-      showComment.textContent = Value;
-    })
+      showComment.textContent = Value.Comm;
   });
 
 //delete comment
