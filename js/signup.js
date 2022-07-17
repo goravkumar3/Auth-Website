@@ -9,11 +9,14 @@ let signup = () => {
   const obj = {
     email: email.value,
     password: password.value,
+  };
+  const userInfo={
     fullName:FullName.value,
     number: number.value,
     fName:fatherName.value,
     CINC: CINC.value,
-  };
+    profileImage:'',
+  }
   if (obj.email == "") {
     message.style.color = "red";
     message.innerHTML = "Enter your email address";
@@ -21,15 +24,30 @@ let signup = () => {
   } else if (obj.password == "") {
     message.innerHTML = "Enter your password";
     password.focus();
-  } else {
-    var database = firebase.database();
-  database.ref("usersInfo/").push(obj);
+  } else if (userInfo.fullName == "") {
+    message.innerHTML = "Enter your Name";
+    FullName.focus();
+  } else if (userInfo.fName == "") {
+    message.innerHTML = "Enter your father name";
+    fatherName.focus();
+  } else if (userInfo.number == "") {
+    message.innerHTML = "Enter your number";
+    number.focus();
+  }  else if (userInfo.CINC == "") {
+    message.innerHTML = "Enter your CINC number";
+    CINC.focus();
+  }
+  else {
+  //   var database = firebase.database();
+  // database.ref("usersInfo/"+ uId).set(userInfo);
+
     firebase
       .auth()
       .createUserWithEmailAndPassword(obj.email, obj.password)
       .then((userCredential) => {
-        // Signed in
+        // Signed in()
         var user = userCredential.user;
+        firebase.firestore().collection('users/').doc(user.uid).set(userInfo);
         user.sendEmailVerification();
         message.style.color = 'green';
         message.innerHTML="Sign up Successfully";
@@ -46,7 +64,7 @@ let signup = () => {
 };
 const imag=(e)=>{
   const file = e.target.files[0];
-  var uploadTask = storageRef.ref(`images/${file.name}`).put(file);
+  var uploadTask = firebase.storage().ref().child(`images/${file.name}`).put(file);
   uploadTask.on('state_changed', 
     (snapshot) => {
       // Observe state change events such as progress, pause, and resume
