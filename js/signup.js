@@ -29,7 +29,7 @@ let signup = () => {
     FullName.focus();
   } else if (userInfo.fName == "") {
     message.innerHTML = "Enter your father name";
-    fatherName.focus();
+    fatherName.focus  ();
   } else if (userInfo.number == "") {
     message.innerHTML = "Enter your number";
     number.focus();
